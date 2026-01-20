@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寺﨑着付け教室 | 宇都宮</title>
+    <meta name="description" content="宇都宮市出身の着付け講師、寺﨑今日子の着付け教室です。初心者からプロを目指す方まで。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (デザインを整えるためのツール) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome (アイコンを表示するためのツール) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind設定 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sakura': '#fdf2f4',
+                        'sakura-dark': '#ebc0c8',
+                        'matcha': '#7c8577',
+                        'sumi': '#333333',
+                        'fuji': '#8d93c8',
+                        'beni': '#b94047',
+                    },
+                    fontFamily: {
+                        'serif': ['"Shippori Mincho"', 'serif'],
+                        'sans': ['"Zen Kaku Gothic New"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 smooth-scroll text-sumi antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif text-beni font-bold flex items-center gap-2">
+                <i class="fa-solid fa-fan text-sakura-dark"></i>
+                寺﨑着付け教室
+            </a>
+            <nav class="hidden md:flex gap-8 font-serif text-gray-600">
+                <a href="#profile" class="hover:text-beni transition-colors">プロフィール</a>
+                <a href="#history" class="hover:text-beni transition-colors">着物への想い</a>
+                <a href="#awards" class="hover:text-beni transition-colors">実績</a>
+                <a href="#message" class="hover:text-beni transition-colors">ご挨拶</a>
+                <a href="#contact" class="bg-beni text-white px-5 py-2 rounded-full hover:bg-red-700 transition-colors text-sm">お問い合わせ</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4">
+            <div class="flex flex-col gap-4 font-serif text-center">
+                <a href="#profile" class="py-2 hover:bg-stone-50">プロフィール</a>
+                <a href="#history" class="py-2 hover:bg-stone-50">着物への想い</a>
+                <a href="#awards" class="py-2 hover:bg-stone-50">実績</a>
+                <a href="#message" class="py-2 hover:bg-stone-50">ご挨拶</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <!-- 30代女性が楽しそうにしている着物イメージ -->
+            <img src="images/hero.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1627964406691-1b1c6182c610?q=80&w=2670&auto=format&fit=crop';"
+                 alt="着物姿で楽しむ女性" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 z-10 relative flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-left space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+                <p class="text-beni font-serif tracking-widest text-lg">ー 伝統を、もっと身近に ー</p>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif leading-tight">
+                    装うよろこび、<br>
+                    あなたらしく。
+                </h1>
+                <p class="text-gray-700 leading-relaxed max-w-md bg-white/60 p-4 rounded-lg backdrop-blur-sm">
+                    初めての方も、プロを目指す方も。<br>
+                    宇都宮で学ぶ、心温まる着付けの時間。
+                </p>
+                <a href="#contact" class="inline-block bg-beni text-white px-8 py-3 rounded-full font-serif shadow-lg hover:bg-red-700 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    体験レッスンを申し込む
+                </a>
+            </div>
+            <!-- Decorative Vertical Text for Desktop -->
+            <div class="hidden md:block absolute right-10 top-1/2 transform -translate-y-1/2">
+                <p class="vertical-text text-2xl font-serif text-gray-800 tracking-widest border-r border-gray-400 pr-6 h-96">
+                    美しい着姿は、<br>心も美しくする。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-20 bg-pattern">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Photo Column -->
+                    <div class="md:w-5/12 relative h-96 md:h-auto">
+                        <!-- 30代着物女性のイメージ -->
+                        <img src="images/teacher.jpg" 
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1601309584867-f3550d54f2ba?q=80&w=2070&auto=format&fit=crop';"
+                             alt="寺﨑今日子先生" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-white/90 backdrop-blur px-6 py-2 text-sm text-gray-600">
+                             ※写真はイメージです
+                        </div>
+                    </div>
+                    
+                    <!-- Content Column -->
+                    <div class="md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
+                        <span class="inline-block py-1 px-3 rounded bg-sakura text-beni text-sm font-bold mb-4 w-fit">講師紹介</span>
+                        <h2 class="text-3xl font-serif font-bold mb-2">寺﨑 今日子</h2>
+                        <p class="text-gray-500 mb-6 text-sm">Terasaki Kyoko</p>
+                        
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                宇都宮市出身。3児の母です。<br>
+                                仕事後もハードな母業で、時間に追われる毎日ですが…愛犬と着物のことを考えている時間は癒しです。
+                            </p>
+                            <p>
+                                着物は非日常を感じる特別なものかもしれません。<br>
+                                でも、私はもっと着物を身近に感じてほしいと思っています。<br>
+                                着物を通して、日本の伝統文化をもっと身近に感じて、楽しんでほしいです。
+                            </p>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h3 class="font-serif font-bold text-lg mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-certificate text-yellow-500"></i> 保有資格
+                            </h3>
+                            <p class="font-bold text-gray-800">山野流奥伝準師範講師</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-20 bg-white relative overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-sakura rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-beni font-serif tracking-widest text-sm">ACHIEVEMENTS</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2">主な実績・受賞歴</h2>
+                <div class="w-16 h-1 bg-beni mx-auto mt-4"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l-2 border-sakura-dark pl-8 space-y-10 ml-4 md:ml-0">
+                    
+                    <!-- Award Item 1 -->
+                    <div class="relative fade-in-up" style="animation-delay: 0.1s;">
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-beni text-beni w-5 h-5 rounded-full"></span>
+                        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                            <span class="text-sm font-bold text-gray-500 block mb-1">2025年</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">関東地区芸術祭 振袖の部</h3>
+                            <span class="inline-block bg-beni text-white text-xs px-3 py-1 rounded-full">振袖技能賞</span>
+                        </div>
+                    </div>
+
+                    <!-- Award Item 2 -->
+                    <div class="relative fade-in-up" style="animation-delay: 0.2s;">
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-5 h-5 rounded-full"></span>
+                        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                            <span class="text-sm font-bold text-gray-500 block mb-1">2024年</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 留袖の部（他装）</h3>
+                            <span class="inline-block bg-matcha text-white text-xs px-3 py-1 rounded-full">審査員奨励賞</span>
+                        </div>
+                    </div>
+
+                    <!-- Award Item 3 -->
+                    <div class="relative fade-in-up" style="animation-delay: 0.3s;">
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-5 h-5 rounded-full"></span>
+                        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                            <span class="text-sm font-bold text-gray-500 block mb-1">2024年</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">関東地区芸術祭 留袖の部（他装）</h3>
+                            <span class="inline-block bg-yellow-600 text-white text-xs px-3 py-1 rounded-full"><i class="fa-solid fa-crown mr-1"></i>最優秀賞</span>
+                        </div>
+                    </div>
+
+                    <!-- Award Item 4 -->
+                    <div class="relative fade-in-up" style="animation-delay: 0.4s;">
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-5 h-5 rounded-full"></span>
+                        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100">
+                            <span class="text-sm font-bold text-gray-500 block mb-1">2022年</span>
+                            <h3 class="text-lg font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 小紋一重太鼓の部</h3>
+                            <span class="inline-block bg-gray-500 text-white text-xs px-3 py-1 rounded-full">優秀賞</span>
+                        </div>
+                    </div>
+
+                    <!-- Award Item 5 -->
+                    <div class="relative fade-in-up" style="animation-delay: 0.5s;">
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-5 h-5 rounded-full"></span>
+                        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100">
+                            <span class="text-sm font-bold text-gray-500 block mb-1">2018年</span>
+                            <h3 class="text-lg font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 礼装二重太鼓の部</h3>
+                            <span class="inline-block bg-gray-500 text-white text-xs px-3 py-1 rounded-full">優秀賞</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="history" class="py-24 bg-stone-100">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+                
+                <!-- Story 1 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-sakura opacity-50 z-0"></i>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif font-bold text-beni mb-6">私の着物との出会い</h3>
+                        <div class="space-y-4 text-gray-700 leading-loose">
+                            <p>
+                                私の母も、自分で着物を着られる人でした。<br>
+                                幼い頃から母の着物姿を見ていたので、私にとって着物は身近なものでした。
+                            </p>
+                            <p class="font-bold text-gray-800">
+                                「いつかは自分で着物を着られるようになりたい」
+                            </p>
+                            <p>
+                                そう思っていた夢が実現したあとも、さらなる技術の向上のため、当店でスタッフ兼着付け講師として務めることになります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fa-solid fa-graduation-cap absolute top-6 left-6 text-6xl text-sakura opacity-50 z-0"></i>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif font-bold text-beni mb-6">着付けを始めたきっかけ</h3>
+                        <div class="space-y-4 text-gray-700 leading-loose">
+                            <p>
+                                初めて自分で着物を買った時のことです。当時は20代前半。街の呉服屋さんで、気に入った着物を購入し、その場で着付けをしてもらいました。
+                            </p>
+                            <p>
+                                担当してくれたのは、私より若いかな？といったフレッシュな女性スタッフでした。<br>
+                                手際よく素敵に着付けしていただいて…その時に思ったのです。
+                            </p>
+                            <p class="font-bold text-xl text-center py-4 font-serif text-gray-800">
+                                「着付けできるなんて、かっこいい」と。
+                            </p>
+                            <p>
+                                私は彼女にあこがれて、すぐに着付け教室の門をたたきました。<br>
+                                それから数十年…どっぷり着物にハマりました。今でも技術を磨くため着付けを学びつつ、教わったことを生徒さんに伝える活動を日々しています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="py-24 relative">
+        <div class="absolute inset-0 z-0">
+             <!-- 背景画像 -->
+             <img src="images/background.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=2692&auto=format&fit=crop';"
+                 alt="和の背景" class="w-full h-full object-cover opacity-10">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <i class="fa-solid fa-seedling text-4xl text-matcha mb-6"></i>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-10 leading-snug">
+                    着物を通して、<br>
+                    心豊かな時間を。
+                </h2>
+                
+                <div class="text-lg leading-loose font-serif text-gray-800 space-y-6">
+                    <p>
+                        着付け教室を始めてから、私自身も着物を通して多くの方と出会いました。<br>
+                        素敵な時間を共有させていただいていることが、自分にとってかけがえのない財産になっています。
+                    </p>
+                    <p>
+                        着付け教室では、技術と知識を身につけるだけではなく、<br>
+                        年齢や職業など関係なく幅広い人と交流を深め、<br>
+                        皆さんと楽しい時間を共有してほしいです。
+                    </p>
+                    <p class="font-bold mt-8">
+                        新しい趣味を見つけたい方、<br>
+                        自分に自信をつけたい方、<br>
+                        和の文化に触れたい方…
+                    </p>
+                    <p class="text-beni text-xl mt-4">
+                        ぜひ一緒に、着物ライフを楽しみ、<br>
+                        これからの毎日を充実させましょう。
+                    </p>
+                </div>
+
+                <div class="mt-12">
+                    <img src="images/signature.png" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=K.T';"
+                         alt="サイン" class="mx-auto rounded-full opacity-50 w-24 h-24">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section id="contact" class="py-20 bg-beni text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-6">体験レッスン受付中</h2>
+            <p class="mb-10 text-white/90">
+                まずは手ぶらで体験から。お気軽にお問い合わせください。
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#" class="bg-white text-beni px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
+                </a>
+                <a href="tel:0000000000" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-colors flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> 00-0000-0000
+                </a>
+            </div>
+            <p class="mt-6 text-sm opacity-80">受付時間：10:00〜18:00（水曜定休）</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-serif text-white font-bold mb-2">寺﨑着付け教室</h3>
+                    <p class="text-sm">〒320-xxxx 栃木県宇都宮市（詳細はお問い合わせください）</p>
+                </div>
+                <div class="flex gap-4 mb-6 md:mb-0">
+                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-line text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 mt-8 pt-8 text-center text-xs">
+                &copy; Terasaki Kimono Dressing Class. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
