@@ -58,7 +58,9 @@
                 <a href="#history" class="hover:text-beni transition-colors">着物への想い</a>
                 <a href="#awards" class="hover:text-beni transition-colors">実績</a>
                 <a href="#message" class="hover:text-beni transition-colors">ご挨拶</a>
-                <a href="#contact" class="bg-beni text-white px-5 py-2 rounded-full hover:bg-red-700 transition-colors text-sm">お問い合わせ</a>
+                <a href="https://line.me/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="bg-line text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors text-sm flex items-center gap-2">
+                    <i class="fa-brands fa-line"></i> LINEで申し込む
+                </a>
             </nav>
             <!-- Mobile Menu Button -->
             <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
@@ -85,6 +87,15 @@
                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1627964406691-1b1c6182c610?q=80&w=2670&auto=format&fit=crop';"
                  alt="着物姿で楽しむ女性" class="w-full h-full object-cover opacity-80">
             <div class="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+            <!-- 和風装飾 -->
+            <div class="absolute top-10 right-10 w-32 h-32 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-20 left-10 w-24 h-24 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-6xl"></i>
+            </div>
         </div>
         
         <div class="container mx-auto px-4 z-10 relative flex flex-col md:flex-row items-center justify-between">
@@ -106,8 +117,19 @@
     </section>
 
     <!-- Profile Section -->
-    <section id="profile" class="py-20 bg-pattern">
-        <div class="container mx-auto px-4">
+    <section id="profile" class="py-20 bg-pattern relative">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-5 right-5 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-10 left-5 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 <div class="flex flex-col md:flex-row">
                     <!-- Photo Column -->
@@ -153,15 +175,28 @@
     </section>
 
     <!-- Awards Section -->
-    <section id="awards" class="py-20 bg-white relative overflow-hidden">
+    <section id="awards" class="py-20 bg-white relative overflow-hidden bg-seigaiha-pattern">
         <!-- Decorative Background Element -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-sakura rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-20 left-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+        </div>
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-12">
-                <span class="text-beni font-serif tracking-widest text-sm">ACHIEVEMENTS</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2">主な実績・受賞歴</h2>
-                <div class="w-16 h-1 bg-beni mx-auto mt-4"></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold">主な実績・受賞歴</h2>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                    <div class="w-16 h-1 bg-beni"></div>
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                </div>
             </div>
 
             <div class="max-w-3xl mx-auto">
@@ -169,7 +204,11 @@
                     
                     <!-- Award Item 1 -->
                     <div class="relative fade-in-up" style="animation-delay: 0.1s;">
-                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-beni text-beni w-5 h-5 rounded-full"></span>
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-beni text-beni w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" class="w-4 h-4" fill="currentColor">
+                                <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z"/>
+                            </svg>
+                        </span>
                         <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
                             <span class="text-sm font-bold text-gray-500 block mb-1">2025年</span>
                             <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">関東地区芸術祭 振袖の部</h3>
@@ -179,7 +218,11 @@
 
                     <!-- Award Item 2 -->
                     <div class="relative fade-in-up" style="animation-delay: 0.2s;">
-                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-5 h-5 rounded-full"></span>
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" class="w-4 h-4" fill="currentColor">
+                                <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z"/>
+                            </svg>
+                        </span>
                         <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
                             <span class="text-sm font-bold text-gray-500 block mb-1">2024年</span>
                             <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 留袖の部（他装）</h3>
@@ -189,7 +232,9 @@
 
                     <!-- Award Item 3 -->
                     <div class="relative fade-in-up" style="animation-delay: 0.3s;">
-                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-5 h-5 rounded-full"></span>
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-sakura-dark text-sakura-dark w-8 h-8 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-fan text-xs"></i>
+                        </span>
                         <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
                             <span class="text-sm font-bold text-gray-500 block mb-1">2024年</span>
                             <h3 class="text-xl font-serif font-bold text-gray-800 mb-2">関東地区芸術祭 留袖の部（他装）</h3>
@@ -199,7 +244,11 @@
 
                     <!-- Award Item 4 -->
                     <div class="relative fade-in-up" style="animation-delay: 0.4s;">
-                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-5 h-5 rounded-full"></span>
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" class="w-4 h-4" fill="currentColor" opacity="0.6">
+                                <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z"/>
+                            </svg>
+                        </span>
                         <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100">
                             <span class="text-sm font-bold text-gray-500 block mb-1">2022年</span>
                             <h3 class="text-lg font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 小紋一重太鼓の部</h3>
@@ -209,7 +258,11 @@
 
                     <!-- Award Item 5 -->
                     <div class="relative fade-in-up" style="animation-delay: 0.5s;">
-                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-5 h-5 rounded-full"></span>
+                        <span class="absolute -left-[41px] top-1 bg-white border-2 border-gray-300 text-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" class="w-4 h-4" fill="currentColor" opacity="0.6">
+                                <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z"/>
+                            </svg>
+                        </span>
                         <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-100">
                             <span class="text-sm font-bold text-gray-500 block mb-1">2018年</span>
                             <h3 class="text-lg font-serif font-bold text-gray-800 mb-2">芸術祭全国大会 礼装二重太鼓の部</h3>
@@ -223,13 +276,30 @@
     </section>
 
     <!-- Story Section -->
-    <section id="history" class="py-24 bg-stone-100">
-        <div class="container mx-auto px-4">
+    <section id="history" class="py-24 bg-stone-100 relative bg-asanoha-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 right-10 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-10 left-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
                 
                 <!-- Story 1 -->
                 <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
                     <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-sakura opacity-50 z-0"></i>
+                    <!-- 装飾要素 -->
+                    <div class="absolute top-4 right-4 w-12 h-12 decorative-icon decorative-icon-sakura opacity-30 z-0">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-beni mb-6">私の着物との出会い</h3>
                         <div class="space-y-4 text-gray-700 leading-loose">
@@ -250,6 +320,10 @@
                 <!-- Story 2 -->
                 <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
                     <i class="fa-solid fa-graduation-cap absolute top-6 left-6 text-6xl text-sakura opacity-50 z-0"></i>
+                    <!-- 装飾要素 -->
+                    <div class="absolute bottom-4 right-4 w-12 h-12 decorative-icon decorative-icon-fan opacity-30 z-0">
+                        <i class="fa-solid fa-fan text-4xl"></i>
+                    </div>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-beni mb-6">着付けを始めたきっかけ</h3>
                         <div class="space-y-4 text-gray-700 leading-loose">
@@ -279,63 +353,31 @@
         </div>
     </section>
 
-    <!-- Message Section -->
-    <section id="message" class="py-24 relative">
-        <div class="absolute inset-0 z-0">
-             <!-- 背景画像 -->
-             <img src="images/background.jpg" 
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=2692&auto=format&fit=crop';"
-                 alt="和の背景" class="w-full h-full object-cover opacity-10">
-        </div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <i class="fa-solid fa-seedling text-4xl text-matcha mb-6"></i>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-10 leading-snug">
-                    着物と、<br>
-                    新しいわたし。
-                </h2>
-                
-                <div class="text-lg leading-loose font-serif text-gray-800 space-y-6">
-                    <p>
-                        20年以上、着物の世界に関わってきた私自身、着物を通して多くの方と出会い、豊かな経験を積むことができました。<br>
-                        その経験が、私の人生を豊かにしてくれたのです。
-                    </p>
-                    <p>
-                        着付け教室では、技術と知識を身につけるだけではなく、<br>
-                        年齢や職業など関係なく幅広い人と交流を深め、<br>
-                        皆さんと楽しい時間を共有してほしいです。
-                    </p>
-                    <p>
-                        着物のお手入れや接客、写真館など、着物に関わるあらゆる業務を通じて、<br>
-                        様々な経験を積むことができます。<br>
-                        その経験が、あなたの人生を豊かにするきっかけになるかもしれません。
-                    </p>
-                    <p class="font-bold mt-8">
-                        新しい自分を見つけたい方、<br>
-                        豊かな出会いと経験を積みたい方、<br>
-                        人生をより豊かにしたい方…
-                    </p>
-                    <p class="text-beni text-xl mt-4">
-                        ぜひ一緒に、着物と新しいわたしを、<br>
-                        見つけていきましょう。
-                    </p>
-                </div>
-
-                <div class="mt-12">
-                    <img src="images/signature.png" 
-                         onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=K.T';"
-                         alt="サイン" class="mx-auto rounded-full opacity-50 w-24 h-24">
-                </div>
+    <!-- Student Voices Section -->
+    <section class="py-20 bg-sakura relative bg-sakura-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 left-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+            <div class="absolute bottom-10 right-10 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
             </div>
         </div>
-    </section>
-
-    <!-- Student Voices Section -->
-    <section class="py-20 bg-sakura">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sumi">受講生の声</h2>
-                <div class="w-16 h-1 bg-beni mx-auto mt-4"></div>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                    <div class="w-16 h-1 bg-beni"></div>
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                </div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -382,12 +424,148 @@
         </div>
     </section>
 
+    <!-- Odekakekai Section -->
+    <section class="py-20 bg-white relative bg-wave-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-5 right-5 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-5 left-5 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="inline-block bg-beni text-white text-sm font-bold px-4 py-1 rounded-full mb-4">企画中</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sumi">着物でお出かけ会</h2>
+                    <div class="flex items-center justify-center gap-2 mt-4">
+                        <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                            <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                        </svg>
+                        <div class="w-16 h-1 bg-beni"></div>
+                        <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                            <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Image Column -->
+                    <div class="order-2 md:order-1">
+                        <div class="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-image text-gray-400 text-4xl opacity-50"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Column -->
+                    <div class="order-1 md:order-2 space-y-6">
+                        <div class="space-y-4 text-sumi leading-relaxed">
+                            <p class="text-lg font-serif font-bold text-beni">
+                                やっぱり着物で出かけるのが楽しいです
+                            </p>
+                            <p>
+                                着物を着る方の悩みの一つが「着物を着る機会がない」ということ。せっかく着付けを学んでも、着る機会がなければ着物への想いも薄れてしまいます。
+                            </p>
+                            <p>
+                                そこで、月一回程度、着物をきちっと着付けてお出かけする機会を企画中です。美術館やカフェ、遠征先での食事など、着物を着て楽しむ時間を一緒に過ごしませんか？
+                            </p>
+                            <p class="font-bold text-matcha">
+                                着物の仕事を始める前は、バスガイドとして様々な旅行先を案内した経験があり、その経験も生かして皆さんが楽しんでいただけるようなお出かけ会を考えています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="py-24 relative">
+        <div class="absolute inset-0 z-0">
+             <!-- 背景画像 -->
+             <img src="images/background.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=2692&auto=format&fit=crop';"
+                 alt="和の背景" class="w-full h-full object-cover opacity-10">
+             <!-- 和風パターン -->
+             <div class="absolute inset-0 bg-seigaiha-pattern opacity-30"></div>
+        </div>
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-20 left-5 w-24 h-24 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-20 right-5 w-20 h-20 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-6xl"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <i class="fa-solid fa-seedling text-4xl text-matcha mb-6"></i>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-10 leading-snug">
+                    着物と、<br>
+                    新しいわたし。
+                </h2>
+                
+                <div class="text-lg leading-loose font-serif text-gray-800 space-y-6">
+                    <p>
+                        20年以上、着物の世界に関わってきた私自身、着物を通して多くの方と出会い、豊かな経験を積むことができました。<br>
+                        その経験が、私の人生を豊かにしてくれたのです。
+                    </p>
+                    <p>
+                        着付け教室では、技術と知識を身につけるだけではなく、<br>
+                        年齢や職業など関係なく幅広い人と交流を深め、<br>
+                        皆さんと楽しい時間を共有してほしいです。
+                    </p>
+                    <p>
+                        着物のお手入れや接客、写真館など、着物に関わるあらゆる業務を通じて、<br>
+                        様々な経験を積むことができます。<br>
+                        その経験が、あなたの人生を豊かにするきっかけになるかもしれません。
+                    </p>
+                    <p class="font-bold mt-8">
+                        新しい自分を見つけたい方、<br>
+                        豊かな出会いと経験を積みたい方、<br>
+                        人生をより豊かにしたい方…
+                    </p>
+                    <p class="text-beni text-xl mt-4">
+                        ぜひ一緒に、着物と新しいわたしを、<br>
+                        見つけていきましょう。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Kimono Collection Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-white relative bg-seigaiha-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 left-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+            <div class="absolute bottom-10 right-10 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sumi">着付けコレクション</h2>
-                <p class="text-matcha mb-2">先生が着付けた方々の楽しそうな写真</p>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-matcha opacity-50">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                    <p class="text-matcha">先生が着付けた方々の楽しそうな写真</p>
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-matcha opacity-50">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                </div>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
@@ -437,11 +615,30 @@
     </section>
 
     <!-- Instagram Section -->
-    <section class="py-20 bg-sakura">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-sakura relative bg-sakura-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 right-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+            <div class="absolute bottom-10 left-10 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sumi">Instagram</h2>
-                <p class="text-matcha mb-2">レッスンの様子や着物の楽しさを発信中</p>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-matcha opacity-50">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                    <p class="text-matcha">レッスンの様子や着物の楽しさを発信中</p>
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-matcha opacity-50">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                </div>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="text-beni hover:text-red-700 transition-colors inline-flex items-center gap-2">
                     <i class="fa-brands fa-instagram text-xl"></i>
                     <span class="font-serif">@kyoko_kimono_time</span>
@@ -509,11 +706,30 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-white relative bg-asanoha-pattern">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 left-10 w-20 h-20 decorative-icon decorative-icon-sakura hidden md:block">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-10 right-10 w-16 h-16 decorative-icon decorative-icon-fan hidden md:block">
+                <i class="fa-solid fa-fan text-5xl"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sumi">よくあるご質問</h2>
-                <div class="w-16 h-1 bg-beni mx-auto mt-4"></div>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                    <div class="w-16 h-1 bg-beni"></div>
+                    <svg viewBox="0 0 20 20" class="w-4 h-4 text-beni opacity-60">
+                        <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
+                    </svg>
+                </div>
             </div>
             
             <div class="max-w-3xl mx-auto space-y-4">
@@ -576,19 +792,27 @@
     </section>
 
     <!-- CTA / Contact -->
-    <section id="contact" class="py-20 bg-beni text-white">
-        <div class="container mx-auto px-4 text-center">
+    <section id="contact" class="py-20 bg-beni text-white relative overflow-hidden">
+        <!-- 装飾要素 -->
+        <div class="section-decoration">
+            <div class="absolute top-10 right-10 w-24 h-24 decorative-icon hidden md:block" style="opacity: 0.05;">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20 Q55 30 60 25 Q65 20 60 30 Q70 35 65 40 Q70 45 60 45 Q55 55 50 50 Q45 55 40 45 Q30 45 35 40 Q30 35 40 30 Q35 20 40 25 Q45 30 50 20 Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-10 left-10 w-20 h-20 decorative-icon hidden md:block" style="opacity: 0.05;">
+                <i class="fa-solid fa-fan text-6xl text-white"></i>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl font-serif font-bold mb-6">体験レッスン受付中</h2>
             <p class="mb-10 text-white/90">
                 まずは手ぶらで体験から。お気軽にお問い合わせください。
             </p>
             
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#" class="bg-white text-beni px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
-                </a>
-                <a href="tel:0000000000" class="border-2 border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-colors flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone"></i> 00-0000-0000
+            <div class="flex justify-center">
+                <a href="https://line.me/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="inline-block bg-line text-white px-10 py-4 rounded-full font-serif shadow-lg hover:bg-green-600 hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-line text-xl"></i> LINEから体験レッスンを申し込む
                 </a>
             </div>
             <p class="mt-6 text-sm opacity-80">受付時間：10:00〜18:00（水曜定休）</p>
