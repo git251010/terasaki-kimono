@@ -1,0 +1,7 @@
+# 企画書などの非公開ファイル
+企画書.md
+private/企画書.md
+private/
+
+# macOS
+.DS_Store
