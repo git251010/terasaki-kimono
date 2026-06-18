@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FBFAF5"/>
+  <circle cx="960" cy="110" r="270" fill="#E8F1E7"/>
+  <circle cx="1040" cy="560" r="180" fill="#F2F5EE"/>
+  <g transform="translate(98 118)">
+    <rect width="130" height="130" rx="30" fill="#FBFAF5" stroke="#DDE8DC" stroke-width="2"/>
+    <path d="M31 75H99" stroke="#20241F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M40 70C42.3 57.7 52.6 48.4 65 48.4C77.4 48.4 87.7 57.7 90 70" stroke="#5B745F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M48 43L65 75L82 43" stroke="#20241F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M54 90H76" stroke="#5B745F" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="65" cy="90" r="6" fill="#20241F"/>
+  </g>
+  <text x="98" y="318" fill="#20241F" font-family="'Shippori Mincho', 'Hiragino Mincho ProN', serif" font-size="64" font-weight="700" letter-spacing="5">寺﨑きもの着付け教室</text>
+  <text x="102" y="386" fill="#5B745F" font-family="'Hiragino Sans', 'Noto Sans JP', sans-serif" font-size="30" letter-spacing="4">栃木県宇都宮市</text>
+  <text x="100" y="482" fill="#20241F" font-family="'Shippori Mincho', 'Hiragino Mincho ProN', serif" font-size="44" font-weight="600" letter-spacing="3">着物から広がる、新しいわたし。</text>
+  <line x1="98" y1="530" x2="510" y2="530" stroke="#5B745F" stroke-width="4" stroke-linecap="round"/>
+</svg>

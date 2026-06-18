@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>ロゴ最終候補 | 寺﨑きもの着付け教室</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --sumi:#20241f; --green:#5b745f; --paper:#fbfaf5; --line:#dfe8dc; }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: "Zen Kaku Gothic New", sans-serif; color: var(--sumi); background: var(--paper); }
+        header { padding: 56px 24px 28px; text-align: center; }
+        h1, h2, h3 { font-family: "Shippori Mincho", serif; }
+        h1 { margin: 0 0 10px; font-size: clamp(28px, 5vw, 48px); letter-spacing: .08em; }
+        header p { margin: 0; color: #607064; line-height: 1.8; }
+        main { width: min(1120px, calc(100% - 32px)); margin: 0 auto 72px; }
+        .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+        .card { background: white; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; box-shadow: 0 20px 54px rgba(32,36,31,.08); }
+        .candidate { padding: 28px; min-height: 250px; display: grid; place-items: center; }
+        .candidate.dark { background: var(--sumi); }
+        .candidate.green { background: #e8f1e7; }
+        .wordmark { display: flex; align-items: center; gap: 16px; }
+        .mark { width: 92px; height: 92px; flex: none; }
+        .name { font-family: "Shippori Mincho", serif; font-size: 22px; font-weight: 700; letter-spacing: .08em; }
+        .sub { margin-top: 5px; font-size: 13px; color: #6f746c; letter-spacing: .12em; }
+        .dark .name, .dark .sub { color: white; }
+        .info { padding: 22px 24px 26px; border-top: 1px solid var(--line); }
+        .badge { display: inline-block; margin-bottom: 10px; color: white; background: var(--green); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; }
+        h2 { margin: 0 0 8px; font-size: 22px; }
+        p { line-height: 1.8; }
+        .mock { margin-top: 28px; background: white; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; }
+        .mock-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 26px; border-bottom: 1px solid var(--line); }
+        .mock-header nav { display: flex; gap: 24px; color: #687065; font-family: "Shippori Mincho", serif; }
+        .icons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 24px; }
+        .icon-test { aspect-ratio: 1; display: grid; place-items: center; border-radius: 22px; background: #f4f7f2; }
+        .icon-test.dark { background: var(--sumi); }
+        .icon-test img { width: 56%; height: 56%; }
+        .dark img { filter: brightness(0) invert(1); }
+        @media (max-width: 860px) {
+            .grid { grid-template-columns: 1fr; }
+            .mock-header nav { display: none; }
+            .icons { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ロゴ最終候補 3案</h1>
+        <p>既存50案から、サイトの印象・小サイズ・白黒表示の強さで絞り込みました。<br>現在のサイト仮採用は「A案 日の出＋帯」です。</p>
+    </header>
+    <main>
+        <section class="grid" aria-label="ロゴ候補">
+            <article class="card">
+                <div class="candidate">
+                    <div class="wordmark">
+                        <img src="images/logo.svg" class="mark" alt="">
+                        <div><div class="name">寺﨑きもの</div><div class="sub">着付け教室</div></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="badge">A案 / 仮採用</span>
+                    <h2>日の出＋帯</h2>
+                    <p>「今日子」の今日＝日の出、着物＝帯と衿。教室の明るさと和の芯が両方出る案。小さくしても読めます。</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="candidate green">
+                    <div class="wordmark">
+                        <svg class="mark" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="220" height="220" rx="48" fill="#FBFAF5"/>
+                            <path d="M70 62L110 138L150 62" stroke="#20241F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M65 143H155" stroke="#5B745F" stroke-width="12" stroke-linecap="round"/>
+                            <circle cx="110" cy="162" r="10" fill="#20241F"/>
+                        </svg>
+                        <div><div class="name">寺﨑きもの</div><div class="sub">着付け教室</div></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="badge">B案</span>
+                    <h2>衿と帯</h2>
+                    <p>最もミニマルで、着付け教室だと直感しやすい案。凛としている一方、寺﨑さんらしい固有性はA案より少し弱めです。</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="candidate dark">
+                    <div class="wordmark">
+                        <svg class="mark" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="220" height="220" rx="48" fill="#20241F"/>
+                            <circle cx="110" cy="110" r="58" stroke="#FBFAF5" stroke-width="8"/>
+                            <circle cx="110" cy="110" r="38" stroke="#5B745F" stroke-width="8"/>
+                            <path d="M82 86L110 138L138 86" stroke="#FBFAF5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div><div class="name">寺﨑きもの</div><div class="sub">着付け教室</div></div>
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="badge">C案</span>
+                    <h2>波紋＋衿</h2>
+                    <p>静かで大人っぽい案。SNSアイコンでは強いですが、本文サイトでは少し硬く見えるため、サブ案として残します。</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="mock" aria-label="表示テスト">
+            <div class="mock-header">
+                <div class="wordmark">
+                    <img src="images/logo.svg" class="mark" alt="">
+                    <div><div class="name">寺﨑きもの着付け教室</div><div class="sub">Utsunomiya Kimono Lesson</div></div>
+                </div>
+                <nav><span>プロフィール</span><span>着物への想い</span><span>体験レッスン</span></nav>
+            </div>
+            <div class="icons">
+                <div class="icon-test"><img src="images/logo.svg" alt="白背景での小サイズ表示"></div>
+                <div class="icon-test dark"><img src="images/logo.svg" alt="墨色背景での小サイズ表示"></div>
+                <div class="icon-test"><img src="images/logo.svg" alt="SNSアイコン 1"></div>
+                <div class="icon-test dark"><img src="images/logo.svg" alt="SNSアイコン 2"></div>
+                <div class="icon-test"><img src="images/favicon.svg" alt="favicon 表示"></div>
+                <div class="icon-test dark"><img src="images/favicon.svg" alt="favicon 反転表示"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

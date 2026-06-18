@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>会員専用ページ | 寺﨑きもの着付け教室</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind設定（メインサイトと同じ） -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'white': '#FFFFFF',
+                        'off-white': '#FAFAFA',
+                        'light-green': '#E8F5E9',
+                        'light-green-medium': '#C8E6C9',
+                        'light-green-dark': '#A5D6A7',
+                        'black': '#000000',
+                        'dark-gray': '#212121',
+                        'medium-gray': '#757575',
+                    },
+                    fontFamily: {
+                        'serif': ['"Shippori Mincho"', 'serif'],
+                        'sans': ['"Zen Kaku Gothic New"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+        .video-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .video-card.active {
+            ring: 2px;
+            box-shadow: 0 0 0 2px #A5D6A7;
+        }
+        .thumb-placeholder {
+            aspect-ratio: 16/9;
+            position: relative;
+            overflow: hidden;
+        }
+        .thumb-placeholder .play-icon {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .video-card:hover .play-icon {
+            opacity: 1;
+        }
+        .category-badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-off-white text-dark-gray antialiased font-sans">
+
+    <!-- ========================================== -->
+    <!-- パスワード入力画面 -->
+    <!-- ========================================== -->
+    <div id="login-screen" class="min-h-screen flex items-center justify-center px-4">
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 max-w-md w-full text-center fade-in">
+            <!-- ロゴ -->
+            <div class="mb-6">
+                <i class="fa-solid fa-fan text-light-green-medium text-4xl mb-3"></i>
+                <h1 class="text-2xl font-serif font-bold text-dark-gray">会員専用ページ</h1>
+                <p class="text-medium-gray text-sm mt-2">寺﨑きもの着付け教室</p>
+            </div>
+
+            <!-- パスワード入力 -->
+            <div class="mt-8">
+                <label for="password" class="block text-sm text-medium-gray mb-2 text-left">パスワードを入力してください</label>
+                <div class="relative">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="パスワード"
+                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-light-green-dark focus:ring-2 focus:ring-light-green transition-all text-center text-lg tracking-widest"
+                        onkeydown="if(event.key==='Enter') checkPassword()"
+                    >
+                </div>
+                <p id="error-msg" class="text-red-400 text-sm mt-2 hidden">パスワードが違います</p>
+                <button
+                    onclick="checkPassword()"
+                    class="mt-6 w-full bg-light-green-dark text-white py-3 rounded-lg font-serif hover:bg-green-400 transition-colors shadow-md"
+                >
+                    <i class="fa-solid fa-lock-open mr-2"></i>ログイン
+                </button>
+            </div>
+
+            <!-- 戻るリンク -->
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <a href="../" class="text-medium-gray text-sm hover:text-light-green-dark transition-colors">
+                    <i class="fa-solid fa-arrow-left mr-1"></i> トップページに戻る
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 会員コンテンツ（ログイン後に表示） -->
+    <!-- ========================================== -->
+    <div id="members-content" class="hidden">
+
+        <!-- ヘッダー -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-fan text-light-green-medium"></i>
+                    <span class="font-serif font-bold text-dark-gray">会員専用ページ</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="../" class="text-medium-gray text-sm hover:text-light-green-dark transition-colors">
+                        <i class="fa-solid fa-home mr-1"></i>
+                        <span class="hidden sm:inline">トップページ</span>
+                    </a>
+                    <button onclick="logout()" class="text-medium-gray text-sm hover:text-red-400 transition-colors">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i>
+                        <span class="hidden sm:inline">ログアウト</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="container mx-auto px-4 py-8 max-w-5xl">
+
+            <!-- あいさつ -->
+            <div class="text-center mb-8 fade-in">
+                <h2 class="text-2xl md:text-3xl font-serif font-bold text-dark-gray mb-3">
+                    レッスン動画
+                </h2>
+                <p class="text-medium-gray">
+                    レッスンの復習にお役立てください。動画は随時追加していきます。
+                </p>
+            </div>
+
+            <!-- 動画数・カテゴリフィルター -->
+            <div class="flex flex-wrap items-center justify-between mb-6 gap-3 fade-in">
+                <p class="text-sm text-medium-gray">
+                    <i class="fa-solid fa-video mr-1"></i>全 <span id="video-count" class="font-bold text-dark-gray">10</span> 本
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                    <button onclick="filterVideos('all')" class="filter-btn category-badge bg-light-green-dark text-white" data-cat="all">すべて</button>
+                    <button onclick="filterVideos('基本')" class="filter-btn category-badge bg-gray-100 text-medium-gray" data-cat="基本">基本</button>
+                    <button onclick="filterVideos('帯結び')" class="filter-btn category-badge bg-gray-100 text-medium-gray" data-cat="帯結び">帯結び</button>
+                    <button onclick="filterVideos('お手入れ')" class="filter-btn category-badge bg-gray-100 text-medium-gray" data-cat="お手入れ">お手入れ</button>
+                    <button onclick="filterVideos('コーデ')" class="filter-btn category-badge bg-gray-100 text-medium-gray" data-cat="コーデ">コーデ</button>
+                </div>
+            </div>
+
+            <!-- 再生中の動画 -->
+            <div id="player-area" class="bg-white rounded-2xl shadow-lg p-4 md:p-6 mb-8 fade-in hidden">
+                <div class="video-container">
+                    <iframe
+                        id="youtube-player"
+                        src=""
+                        title="レッスン動画"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="mt-4 flex items-start justify-between">
+                    <div>
+                        <h3 id="now-playing-title" class="font-serif font-bold text-lg text-dark-gray"></h3>
+                        <p id="now-playing-meta" class="text-sm text-medium-gray mt-1"></p>
+                    </div>
+                    <button onclick="closePlayer()" class="text-medium-gray hover:text-dark-gray ml-4 mt-1">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 動画カード一覧 -->
+            <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+
+            <!-- 使い方ガイド -->
+            <div class="bg-light-green rounded-2xl p-6 md:p-8 fade-in">
+                <h3 class="font-serif font-bold text-dark-gray mb-4">
+                    <i class="fa-solid fa-circle-info text-light-green-dark mr-2"></i>
+                    動画の見かた
+                </h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl p-4 text-center">
+                        <div class="text-light-green-dark text-2xl mb-2">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <p class="text-sm font-bold mb-1">タップで再生</p>
+                        <p class="text-xs text-medium-gray">見たい動画をタップすると上に再生されます</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center">
+                        <div class="text-light-green-dark text-2xl mb-2">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <p class="text-sm font-bold mb-1">カテゴリで絞る</p>
+                        <p class="text-xs text-medium-gray">「基本」「帯結び」などで絞り込めます</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center">
+                        <div class="text-light-green-dark text-2xl mb-2">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <p class="text-sm font-bold mb-1">何度でも復習</p>
+                        <p class="text-xs text-medium-gray">繰り返し見て、着付けを身につけましょう</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- フッター -->
+        <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+            <div class="container mx-auto px-4 text-center text-sm">
+                <p>&copy; 寺﨑きもの着付け教室 — 会員専用ページ</p>
+                <p class="text-xs text-gray-500 mt-2">このページの内容は会員限定です。URLやパスワードの共有はお控えください。</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- JavaScript -->
+    <!-- ========================================== -->
+    <script>
+        // ============================================================
+        // 設定
+        // ============================================================
+
+        const MEMBER_PASSWORD = "kimono2026";
+
+        // ============================================================
+        // デモ用の動画データ（10本）
+        // ※ 本番では YouTube Data API で再生リストから自動取得するか、
+        //    ここに動画を追加していく運用
+        // ============================================================
+
+        const DEMO_VIDEOS = [
+            {
+                id: "demo01",
+                title: "【第1回】着物の基本 — 必要なものを揃えよう",
+                category: "基本",
+                date: "2026.02.01",
+                duration: "12:30",
+                color: "#C8E6C9",
+                icon: "fa-shirt",
+                description: "着付けに必要な小物一覧と選び方のポイント",
+            },
+            {
+                id: "demo02",
+                title: "【第2回】長襦袢の着方",
+                category: "基本",
+                date: "2026.02.05",
+                duration: "15:45",
+                color: "#E8F5E9",
+                icon: "fa-person-dress",
+                description: "美しいシルエットを作る長襦袢の着付け方",
+            },
+            {
+                id: "demo03",
+                title: "【第3回】着物の着方 — 前半（下前・上前）",
+                category: "基本",
+                date: "2026.02.10",
+                duration: "18:20",
+                color: "#A5D6A7",
+                icon: "fa-hands",
+                description: "下前と上前の合わせ方、衿の整え方",
+            },
+            {
+                id: "demo04",
+                title: "【第4回】着物の着方 — 後半（おはしょり・衿元）",
+                category: "基本",
+                date: "2026.02.15",
+                duration: "16:10",
+                color: "#C8E6C9",
+                icon: "fa-wand-magic-sparkles",
+                description: "おはしょりの始末と衿元のキレイな整え方",
+            },
+            {
+                id: "demo05",
+                title: "【第5回】名古屋帯 — お太鼓結び",
+                category: "帯結び",
+                date: "2026.02.20",
+                duration: "22:15",
+                color: "#FFF9C4",
+                icon: "fa-ribbon",
+                description: "基本のお太鼓結び。手順をゆっくり解説",
+            },
+            {
+                id: "demo06",
+                title: "【第6回】半幅帯 — 文庫結び",
+                category: "帯結び",
+                date: "2026.02.25",
+                duration: "14:50",
+                color: "#FFE0B2",
+                icon: "fa-bow-food",
+                description: "カジュアルな文庫結び。浴衣にも使えます",
+            },
+            {
+                id: "demo07",
+                title: "【第7回】半幅帯 — 貝の口結び",
+                category: "帯結び",
+                date: "2026.03.01",
+                duration: "11:30",
+                color: "#FFF9C4",
+                icon: "fa-ribbon",
+                description: "粋な貝の口結び。男性の着付けにも",
+            },
+            {
+                id: "demo08",
+                title: "着物のたたみ方と保管のコツ",
+                category: "お手入れ",
+                date: "2026.03.03",
+                duration: "10:45",
+                color: "#E1F5FE",
+                icon: "fa-box-open",
+                description: "本だたみの手順とシワを防ぐ保管方法",
+            },
+            {
+                id: "demo09",
+                title: "春のおでかけコーディネート3選",
+                category: "コーデ",
+                date: "2026.03.04",
+                duration: "8:20",
+                color: "#FCE4EC",
+                icon: "fa-palette",
+                description: "桜の季節に合う色合わせと小物選び",
+            },
+            {
+                id: "demo10",
+                title: "帯揚げ・帯締めのアレンジ5パターン",
+                category: "コーデ",
+                date: "2026.03.05",
+                duration: "13:00",
+                color: "#F3E5F5",
+                icon: "fa-star",
+                description: "いつもの着物が変わる小物のアレンジ術",
+            },
+        ];
+
+        // カテゴリ色マッピング
+        const CATEGORY_COLORS = {
+            "基本": { bg: "bg-green-50", text: "text-green-700", border: "border-green-200" },
+            "帯結び": { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200" },
+            "お手入れ": { bg: "bg-blue-50", text: "text-blue-700", border: "border-blue-200" },
+            "コーデ": { bg: "bg-pink-50", text: "text-pink-700", border: "border-pink-200" },
+        };
+
+        // ============================================================
+        // パスワード認証
+        // ============================================================
+
+        window.addEventListener("DOMContentLoaded", function () {
+            if (sessionStorage.getItem("terasaki_member") === "ok") {
+                showContent();
+            }
+        });
+
+        function checkPassword() {
+            const input = document.getElementById("password").value;
+            const errorMsg = document.getElementById("error-msg");
+
+            if (input === MEMBER_PASSWORD) {
+                sessionStorage.setItem("terasaki_member", "ok");
+                showContent();
+            } else {
+                errorMsg.classList.remove("hidden");
+                document.getElementById("password").classList.add("border-red-300");
+                setTimeout(function () {
+                    errorMsg.classList.add("hidden");
+                    document.getElementById("password").classList.remove("border-red-300");
+                }, 2000);
+            }
+        }
+
+        function showContent() {
+            document.getElementById("login-screen").classList.add("hidden");
+            const content = document.getElementById("members-content");
+            content.classList.remove("hidden");
+            content.classList.add("fade-in");
+            renderVideoGrid(DEMO_VIDEOS);
+        }
+
+        function logout() {
+            sessionStorage.removeItem("terasaki_member");
+            location.reload();
+        }
+
+        // ============================================================
+        // 動画カード表示
+        // ============================================================
+
+        function renderVideoGrid(videos) {
+            const grid = document.getElementById("video-grid");
+            grid.innerHTML = "";
+
+            document.getElementById("video-count").textContent = videos.length;
+
+            videos.forEach(function (v, i) {
+                const catColor = CATEGORY_COLORS[v.category] || { bg: "bg-gray-50", text: "text-gray-700", border: "border-gray-200" };
+
+                const card = document.createElement("div");
+                card.className = "video-card bg-white rounded-xl shadow-sm overflow-hidden fade-in";
+                card.style.animationDelay = (i * 0.05) + "s";
+                card.setAttribute("data-category", v.category);
+                card.onclick = function () { playVideo(v); };
+
+                card.innerHTML =
+                    '<div class="thumb-placeholder rounded-t-xl flex items-center justify-center" style="background-color: ' + v.color + '">' +
+                        '<i class="fa-solid ' + v.icon + ' text-4xl text-white/70"></i>' +
+                        '<div class="play-icon">' +
+                            '<div class="bg-white/90 rounded-full w-12 h-12 flex items-center justify-center shadow-lg">' +
+                                '<i class="fa-solid fa-play text-light-green-dark ml-0.5"></i>' +
+                            '</div>' +
+                        '</div>' +
+                        '<span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded">' + v.duration + '</span>' +
+                    '</div>' +
+                    '<div class="p-4">' +
+                        '<div class="flex items-center gap-2 mb-2">' +
+                            '<span class="category-badge border ' + catColor.bg + ' ' + catColor.text + ' ' + catColor.border + '">' + v.category + '</span>' +
+                            '<span class="text-xs text-medium-gray">' + v.date + '</span>' +
+                        '</div>' +
+                        '<h4 class="text-sm font-bold text-dark-gray leading-snug mb-1">' + v.title + '</h4>' +
+                        '<p class="text-xs text-medium-gray">' + v.description + '</p>' +
+                    '</div>';
+
+                grid.appendChild(card);
+            });
+        }
+
+        // ============================================================
+        // フィルター
+        // ============================================================
+
+        let currentFilter = "all";
+
+        function filterVideos(category) {
+            currentFilter = category;
+
+            // ボタンのスタイル切替
+            document.querySelectorAll(".filter-btn").forEach(function (btn) {
+                if (btn.getAttribute("data-cat") === category) {
+                    btn.className = "filter-btn category-badge bg-light-green-dark text-white";
+                } else {
+                    btn.className = "filter-btn category-badge bg-gray-100 text-medium-gray";
+                }
+            });
+
+            // フィルター適用
+            if (category === "all") {
+                renderVideoGrid(DEMO_VIDEOS);
+            } else {
+                var filtered = DEMO_VIDEOS.filter(function (v) { return v.category === category; });
+                renderVideoGrid(filtered);
+            }
+        }
+
+        // ============================================================
+        // 動画再生
+        // ============================================================
+
+        function playVideo(video) {
+            var playerArea = document.getElementById("player-area");
+            playerArea.classList.remove("hidden");
+
+            // デモ用：実際の動画IDがないのでプレースホルダーを表示
+            // 本番では video.youtubeId を使って埋め込む
+            var player = document.getElementById("youtube-player");
+            // デモ表示用（実際はYouTube動画IDを入れる）
+            player.src = "about:blank";
+
+            document.getElementById("now-playing-title").textContent = video.title;
+            document.getElementById("now-playing-meta").textContent = video.category + " ・ " + video.date + " ・ " + video.duration;
+
+            // プレーヤーまでスクロール
+            playerArea.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function closePlayer() {
+            document.getElementById("player-area").classList.add("hidden");
+            document.getElementById("youtube-player").src = "";
+        }
+    </script>
+
+</body>
+</html>

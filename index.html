@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINE公式リンク受領前のため検索公開は止める -->
     <meta name="robots" content="noindex, nofollow">
-    <title>寺﨑きもの着付け教室 | 宇都宮</title>
-    <meta name="description" content="宇都宮市出身の着付け講師、寺﨑今日子の着付け教室です。初心者からプロを目指す方まで。">
+    <title>寺﨑きもの着付け教室 | 宇都宮市の少人数着付けレッスン</title>
+    <meta name="description" content="栃木県宇都宮市の寺﨑きもの着付け教室。初心者から着付け講師を目指す方まで、少人数で楽しく学べる着付けレッスンです。初回体験無料。">
+    <meta property="og:title" content="寺﨑きもの着付け教室 | 宇都宮市">
+    <meta property="og:description" content="着物から広がる、新しいわたし。宇都宮市の少人数着付けレッスン。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ogp.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,26 +54,27 @@
     </script>
 </head>
 <body class="bg-white smooth-scroll text-dark-gray antialiased">
+    <a href="#main" class="skip-link">本文へ移動</a>
 
     <!-- Header -->
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif text-dark-gray font-bold flex items-center gap-2">
-                <i class="fa-solid fa-fan text-light-green-medium"></i>
-                寺﨑きもの着付け教室
+            <a href="#top" class="site-logo" aria-label="寺﨑きもの着付け教室 トップへ">
+                <img src="images/logo.svg" alt="" class="site-logo__mark" width="44" height="44">
+                <span class="site-logo__text">寺﨑きもの着付け教室</span>
             </a>
-            <nav class="hidden md:flex gap-8 font-serif text-gray-600">
+            <nav class="hidden md:flex gap-8 font-serif text-gray-600" aria-label="メインメニュー">
                 <a href="#profile" class="hover:text-light-green-medium transition-colors">プロフィール</a>
                 <a href="#history" class="hover:text-light-green-medium transition-colors">着物への想い</a>
                 <a href="#awards" class="hover:text-light-green-medium transition-colors">実績</a>
                 <a href="#message" class="hover:text-light-green-medium transition-colors">ご挨拶</a>
-                <a href="https://line.me/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="bg-line text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors text-sm flex items-center gap-2">
-                    <i class="fa-brands fa-line"></i> LINEで申し込む
+                <a href="#contact" data-line-link class="line-link is-pending bg-line text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors text-sm flex items-center gap-2" aria-disabled="true">
+                    <i class="fa-brands fa-line" aria-hidden="true"></i> LINEリンク準備中
                 </a>
             </nav>
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <i class="fa-solid fa-bars text-2xl"></i>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開閉">
+                <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
@@ -76,19 +84,19 @@
                 <a href="#history" class="py-2 hover:bg-off-white">着物への想い</a>
                 <a href="#awards" class="py-2 hover:bg-off-white">実績</a>
                 <a href="#message" class="py-2 hover:bg-off-white">ご挨拶</a>
+                <a href="#contact" data-line-link class="line-link is-pending py-2 rounded-full bg-line text-white" aria-disabled="true">LINEリンク準備中</a>
             </div>
         </div>
     </header>
 
+    <main id="main">
     <!-- Hero Section -->
-    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section id="top" class="hero-section relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <!-- 30代女性が楽しそうにしている着物イメージ -->
-            <img src="images/hero.jpg" 
-                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1627964406691-1b1c6182c610?q=80&w=2670&auto=format&fit=crop';"
-                 alt="着物姿で楽しむ女性" class="w-full h-full object-cover opacity-80">
-            <div class="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent"></div>
+            <img src="images/hero.jpg"
+                 alt="着物姿で楽しむ寺﨑きもの着付け教室の生徒たち" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 hero-gradient"></div>
             <!-- 和風装飾 -->
             <div class="absolute top-10 right-10 w-32 h-32 decorative-icon decorative-icon-sakura hidden md:block">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -98,13 +106,13 @@
         </div>
         
         <div class="container mx-auto px-4 z-10 relative flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 text-left md:text-left space-y-6 fade-in-up" style="animation-delay: 0.2s;">
+            <div class="hero-copy md:w-1/2 text-left md:text-left space-y-6 fade-in-up" style="animation-delay: 0.2s;">
                 <p class="text-dark-gray font-serif tracking-widest text-lg opacity-90">ー 着物と新しいわたし ー</p>
                 <h1 class="text-4xl md:text-6xl font-bold font-serif leading-tight">
                     栃木県宇都宮市<br>
                     きもの着付け教室
                 </h1>
-                <p class="text-gray-700 leading-relaxed max-w-md bg-white/60 p-4 rounded-lg backdrop-blur-sm">
+                <p class="hero-lead text-gray-700 leading-relaxed max-w-md bg-white/60 p-4 rounded-lg backdrop-blur-sm">
                     初めての方も、着付け講師を目指す方も。<br>
                     少人数で楽しく学ぶ、寺﨑きもの着付け教室。
                 </p>
@@ -112,8 +120,8 @@
                     <span class="font-bold text-dark-gray" style="font-size: 18pt;">＼初回無料！／</span>
                 </div>
                 <div class="max-w-md flex justify-center">
-                    <a href="https://line.me/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="inline-block bg-line text-white px-8 py-3 rounded-full font-serif shadow-lg hover:bg-green-600 hover:shadow-xl transition-all transform hover:-translate-y-1">
-                        LINEから体験レッスンを申し込む
+                    <a href="#contact" data-line-link class="line-link is-pending inline-block bg-line text-white px-8 py-3 rounded-full font-serif shadow-lg hover:bg-green-600 hover:shadow-xl transition-all transform hover:-translate-y-1" aria-disabled="true">
+                        LINEリンク準備中
                     </a>
                 </div>
             </div>
@@ -196,14 +204,9 @@
                 <div class="flex flex-col md:flex-row">
                     <!-- Photo Column -->
                     <div class="md:w-5/12 relative h-96 md:h-auto">
-                        <!-- 30代着物女性のイメージ -->
-                        <img src="images/teacher.jpg" 
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1601309584867-f3550d54f2ba?q=80&w=2070&auto=format&fit=crop';"
-                             alt="寺﨑今日子先生" 
-                             class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 bg-white/90 backdrop-blur px-6 py-2 text-sm text-gray-600">
-                             ※写真はイメージです
-                        </div>
+                        <img src="images/teacher.jpg"
+                             alt="寺﨑今日子先生"
+                             class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
                     
                     <!-- Content Column -->
@@ -229,6 +232,60 @@
                                 <i class="fa-solid fa-certificate text-yellow-500"></i> 保有資格
                             </h3>
                             <p class="font-bold text-gray-800">山野流奥伝準師範講師</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub Teacher Profile Section -->
+    <section class="py-16 bg-off-white relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Photo Column -->
+                    <div class="md:w-4/12 relative h-80 md:h-auto">
+                        <img src="images/teacher-asuka.jpg"
+                             alt="明日香先生"
+                             class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="md:w-8/12 p-8 md:p-10 flex flex-col justify-center">
+                        <span class="inline-block py-1 px-3 rounded bg-light-green text-dark-gray text-sm font-bold mb-4 w-fit">講師紹介</span>
+                        <h3 class="text-2xl font-serif font-bold mb-2">明日香</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Asuka</p>
+
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                以前から着物に憧れがあったのですが、始めるきっかけがなく、行動に移せないでいました。
+                                子供が産まれて自分も母親になり、ふと母親も私の入学式などは着物で参加していた事を思い出して、私も娘達の式典には着物で参列したいと思うようになりました。
+                            </p>
+                            <p>
+                                それから教室に通い始め、一人で着物が着られるようになってから、もっと本格的に着付けを学ぼうと思い今に至っています。
+                            </p>
+                            <p>
+                                日本の伝統着である着物の良さ、着る事で自分も違う人になったような楽しさ、それが日常になれるちょっとしたお手伝いができたらと思っています。
+                            </p>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-200 grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-certificate text-yellow-500"></i> 保有資格
+                                </h4>
+                                <p class="text-sm text-gray-800">山野流奥伝準師範講師</p>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-trophy text-yellow-500"></i> 受賞歴
+                                </h4>
+                                <ul class="text-sm text-gray-800 space-y-1">
+                                    <li>2022年 全国大会 小紋一重太鼓の部 準優秀賞</li>
+                                    <li>2024年 全国大会 振袖の部 審査員奨励賞</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -432,45 +489,24 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <!-- Student Voice 1 -->
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full bg-light-green-dark mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold">T.S</span>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-off-white p-8 md:p-10 rounded-2xl shadow-sm relative">
+                    <i class="fa-solid fa-quote-left absolute top-6 left-6 text-5xl text-light-green opacity-40"></i>
+                    <div class="relative z-10 space-y-4 text-dark-gray leading-loose">
+                        <p>
+                            寺崎先生は知識が豊富で、どんな質問にも丁寧に答えてくださる熱意のある先生です。
+                            一人ひとりのレベルや理解度に合わせて、重要なポイントを妥協なく指導してくださるため、着実に技術が身についていく実感があります。
+                        </p>
+                        <p>
+                            私は、おばあちゃんから譲り受けた着物を着てみたいという思いからレッスンを始めました。
+                            現在では、コンテストや奥伝のレッスンにも挑戦したいと考えるようになり、自分自身の成長を実感しています。
+                        </p>
+                        <p>
+                            大人になってから、仕事以外で自分と向き合い、自分を磨く時間はとても貴重です。
+                            この教室は、心と技術の両面を高めることができる、落ち着いた学びの場だと感じています。
+                        </p>
                     </div>
-                    <p class="text-dark-gray leading-relaxed mb-3 italic">"個人レッスンなので、自分のペースでしっかり学べます。先生がとても丁寧に教えてくださるので、初心者の私でも安心して通えています。"</p>
-                    <p class="text-sm text-dark-gray font-bold">T.Sさん</p>
-                    <p class="text-xs text-dark-gray">経験3ヶ月</p>
-                </div>
-                
-                <!-- Student Voice 2 -->
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full bg-light-green-dark mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold">M.K</span>
-                    </div>
-                    <p class="text-dark-gray leading-relaxed mb-3 italic">"着物を通して新しい出会いがあり、人生が豊かになりました。先生の指導のおかげで、自分で着物を着られるようになりました。"</p>
-                    <p class="text-sm text-dark-gray font-bold">M.Kさん</p>
-                    <p class="text-xs text-dark-gray">経験6ヶ月</p>
-                </div>
-                
-                <!-- Student Voice 3 -->
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full bg-light-green-dark mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold">Y.H</span>
-                    </div>
-                    <p class="text-dark-gray leading-relaxed mb-3 italic">"着付け講師を目指していて、技術をしっかり学べる環境が整っています。実績のある先生から学べるので、とても心強いです。"</p>
-                    <p class="text-sm text-dark-gray font-bold">Y.Hさん</p>
-                    <p class="text-xs text-dark-gray">経験12ヶ月</p>
-                </div>
-                
-                <!-- Student Voice 4 -->
-                <div class="text-center">
-                    <div class="w-24 h-24 rounded-full bg-light-green-dark mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold">A.T</span>
-                    </div>
-                    <p class="text-dark-gray leading-relaxed mb-3 italic">"忙しい中でも無理なく通えるペースで学べます。先生が一人ひとりに合わせて指導してくださるので、とてもありがたいです。"</p>
-                    <p class="text-sm text-dark-gray font-bold">A.Tさん</p>
-                    <p class="text-xs text-dark-gray">経験9ヶ月</p>
+                    <p class="text-right mt-6 text-medium-gray text-sm">— 受講生より</p>
                 </div>
             </div>
         </div>
@@ -505,8 +541,8 @@
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <!-- Image Column -->
                     <div class="order-2 md:order-1">
-                        <div class="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
-                            <i class="fa-solid fa-image text-gray-400 text-4xl opacity-50"></i>
+                        <div class="aspect-[4/3] rounded-lg overflow-hidden">
+                            <img src="images/odekake.jpg" alt="着物でお出かけ会の様子" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -607,46 +643,23 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-                <!-- Collection Photo 1 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-1.jpg" alt="赤い着物の着付けコレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
-                
-                <!-- Collection Photo 2 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-2.jpg" alt="淡い色の着物の着付けコレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
-                
-                <!-- Collection Photo 3 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-3.jpg" alt="帯結びが見える着付けコレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
-                
-                <!-- Collection Photo 4 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-4.jpg" alt="華やかな着物姿のコレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
-                
-                <!-- Collection Photo 5 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-5.jpg" alt="着付け後の立ち姿コレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
-                
-                <!-- Collection Photo 6 -->
-                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-solid fa-image text-gray-400 text-2xl opacity-50"></i>
-                    </div>
+                <div class="aspect-[4/5] relative overflow-hidden group cursor-pointer rounded-lg">
+                    <img src="images/collection-6.jpg" alt="きもの姿の集合コレクション" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
             </div>
         </div>
@@ -681,60 +694,29 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto">
-                <!-- Instagram Post 1 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-1.jpg" alt="Instagram投稿写真 1" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 2 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-2.jpg" alt="Instagram投稿写真 2" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 3 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-3.jpg" alt="Instagram投稿写真 3" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 4 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-4.jpg" alt="Instagram投稿写真 4" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 5 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-5.jpg" alt="Instagram投稿写真 5" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 6 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-6.jpg" alt="Instagram投稿写真 6" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 7 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-7.jpg" alt="Instagram投稿写真 7" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                
-                <!-- Instagram Post 8 -->
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
-                    <div class="w-full h-full bg-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                        <i class="fa-brands fa-instagram text-gray-400 text-4xl opacity-50"></i>
-                    </div>
+                    <img src="images/insta-8.jpg" alt="Instagram投稿写真 8" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
         </div>
@@ -767,7 +749,7 @@
             <div class="max-w-3xl mx-auto space-y-4">
                 <!-- FAQ Item 1 -->
                 <div class="border border-light-green-medium rounded-lg overflow-hidden">
-                    <button onclick="toggleFAQ('faq1')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors">
+                    <button type="button" onclick="toggleFAQ('faq1')" class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors" aria-expanded="false" aria-controls="faq1">
                         <span class="font-serif font-bold text-dark-gray">初心者でも大丈夫ですか？</span>
                         <i id="faq1-icon" class="fa-solid fa-chevron-down text-dark-gray transition-transform"></i>
                     </button>
@@ -778,7 +760,7 @@
                 
                 <!-- FAQ Item 2 -->
                 <div class="border border-light-green-medium rounded-lg overflow-hidden">
-                    <button onclick="toggleFAQ('faq2')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors">
+                    <button type="button" onclick="toggleFAQ('faq2')" class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors" aria-expanded="false" aria-controls="faq2">
                         <span class="font-serif font-bold text-dark-gray">レッスンはどのくらいの頻度で通えばいいですか？</span>
                         <i id="faq2-icon" class="fa-solid fa-chevron-down text-dark-gray transition-transform"></i>
                     </button>
@@ -789,7 +771,7 @@
                 
                 <!-- FAQ Item 3 -->
                 <div class="border border-light-green-medium rounded-lg overflow-hidden">
-                    <button onclick="toggleFAQ('faq3')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors">
+                    <button type="button" onclick="toggleFAQ('faq3')" class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors" aria-expanded="false" aria-controls="faq3">
                         <span class="font-serif font-bold text-dark-gray">着物や小物は自分で準備する必要がありますか？</span>
                         <i id="faq3-icon" class="fa-solid fa-chevron-down text-dark-gray transition-transform"></i>
                     </button>
@@ -800,7 +782,7 @@
                 
                 <!-- FAQ Item 4 -->
                 <div class="border border-light-green-medium rounded-lg overflow-hidden">
-                    <button onclick="toggleFAQ('faq4')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors">
+                    <button type="button" onclick="toggleFAQ('faq4')" class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors" aria-expanded="false" aria-controls="faq4">
                         <span class="font-serif font-bold text-dark-gray">着付け講師を目指すこともできますか？</span>
                         <i id="faq4-icon" class="fa-solid fa-chevron-down text-dark-gray transition-transform"></i>
                     </button>
@@ -811,7 +793,7 @@
                 
                 <!-- FAQ Item 5 -->
                 <div class="border border-light-green-medium rounded-lg overflow-hidden">
-                    <button onclick="toggleFAQ('faq5')" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors">
+                    <button type="button" onclick="toggleFAQ('faq5')" class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-light-green transition-colors" aria-expanded="false" aria-controls="faq5">
                         <span class="font-serif font-bold text-dark-gray">レッスンの料金について教えてください</span>
                         <i id="faq5-icon" class="fa-solid fa-chevron-down text-dark-gray transition-transform"></i>
                     </button>
@@ -842,24 +824,29 @@
                 <span class="font-bold text-white" style="font-size: 18pt;">＼初回無料！／</span>
             </div>
             <div class="flex justify-center">
-                <a href="https://line.me/ti/p/@YOUR_LINE_ID" target="_blank" rel="noopener noreferrer" class="inline-block bg-line text-white px-10 py-4 rounded-full font-serif shadow-lg hover:bg-green-600 hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-line text-xl"></i> LINEから体験レッスンを申し込む
+                <a href="#contact" data-line-link class="line-link is-pending inline-block bg-line text-white px-10 py-4 rounded-full font-serif shadow-lg hover:bg-green-600 hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3" aria-disabled="true">
+                    <i class="fa-brands fa-line text-xl" aria-hidden="true"></i> LINEリンク準備中
                 </a>
+                <p id="line-ready" class="mt-4 text-sm text-white/80">正式なLINE公式リンクを設定後、こちらから体験レッスンをお申し込みいただけます。</p>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-12">
         <div class="container mx-auto px-4 text-center md:text-left">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-serif text-white font-bold mb-2">寺﨑きもの着付け教室</h3>
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="" width="40" height="40">
+                        <h3 class="text-xl font-serif text-white font-bold mb-2">寺﨑きもの着付け教室</h3>
+                    </div>
                     <p class="text-sm">栃木県宇都宮市（お申込み者へ詳細をご連絡します）</p>
                 </div>
-                <div class="flex gap-4 mb-6 md:mb-0">
-                    <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
-                    <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-line text-2xl"></i></a>
+                <div class="flex items-center gap-4 mb-6 md:mb-0">
+                    <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagramを開く"><i class="fa-brands fa-instagram text-2xl" aria-hidden="true"></i></a>
+                    <a href="#contact" data-line-link class="line-link is-pending hover:text-white transition-colors" aria-disabled="true" aria-label="LINEリンク準備中"><i class="fa-brands fa-line text-2xl" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-xs">
@@ -873,17 +860,35 @@
         function toggleFAQ(id) {
             const faqContent = document.getElementById(id);
             const faqIcon = document.getElementById(id + '-icon');
+            const faqButton = document.querySelector('[aria-controls="' + id + '"]');
             
             if (faqContent.classList.contains('hidden')) {
                 faqContent.classList.remove('hidden');
                 faqIcon.classList.remove('fa-chevron-down');
                 faqIcon.classList.add('fa-chevron-up');
+                faqButton?.setAttribute('aria-expanded', 'true');
             } else {
                 faqContent.classList.add('hidden');
                 faqIcon.classList.remove('fa-chevron-up');
                 faqIcon.classList.add('fa-chevron-down');
+                faqButton?.setAttribute('aria-expanded', 'false');
             }
         }
+
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton?.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        mobileMenu?.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuButton?.setAttribute('aria-expanded', 'false');
+            });
+        });
     </script>
 
 </body>
