@@ -123,6 +123,37 @@ button:focus-visible {
     transform: none !important;
 }
 
+.contact-line-block {
+    row-gap: 1rem !important;
+}
+
+.contact-line-block .line-link {
+    flex: 0 0 auto;
+}
+
+.contact-line-block #line-ready {
+    display: block;
+    max-width: 42rem;
+    margin: 0 !important;
+    line-height: 1.9;
+}
+
+.faq-button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    font: inherit !important;
+}
+
+.faq-button:hover,
+.faq-button:focus-visible {
+    background: var(--wakaba) !important;
+}
+
 section {
     scroll-margin-top: 92px;
 }
