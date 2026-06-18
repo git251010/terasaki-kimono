@@ -133,9 +133,10 @@ button:focus-visible {
 
 .contact-line-block #line-ready {
     display: block;
-    max-width: 42rem;
+    width: min(100%, 32rem);
     margin: 0 !important;
     line-height: 1.9;
+    text-align: left !important;
 }
 
 .faq-button {
