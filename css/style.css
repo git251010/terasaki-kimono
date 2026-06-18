@@ -139,6 +139,12 @@ button:focus-visible {
     text-align: left !important;
 }
 
+.faq-item {
+    border-color: rgba(91, 116, 95, 0.18) !important;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(32, 36, 31, 0.035);
+}
+
 .faq-button {
     appearance: none !important;
     -webkit-appearance: none !important;
@@ -148,11 +154,19 @@ button:focus-visible {
     border-radius: 0 !important;
     margin: 0 !important;
     font: inherit !important;
+    align-items: center !important;
 }
 
 .faq-button:hover,
 .faq-button:focus-visible {
     background: var(--wakaba) !important;
+}
+
+.faq-answer {
+    border-top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    box-shadow: none !important;
 }
 
 .message-copy,
