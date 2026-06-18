@@ -154,6 +154,15 @@ button:focus-visible {
     background: var(--wakaba) !important;
 }
 
+.message-copy,
+.message-copy p {
+    text-align: left !important;
+}
+
+.message-copy p {
+    max-width: 100%;
+}
+
 section {
     scroll-margin-top: 92px;
 }
