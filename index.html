@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- カスタムCSS -->
-    <link rel="stylesheet" href="css/style.css?v=260619h">
+    <link rel="stylesheet" href="css/style.css?v=260619i">
 
     <!-- Tailwind設定 -->
     <script>
@@ -144,9 +144,9 @@
                     </svg>
                 </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="mobile-card-slider point-slider grid md:grid-cols-3 gap-8 max-w-6xl mx-auto" aria-label="3つの安心">
                 <!-- Point 1: 少人数でしっかり楽しく学べる -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
+                <div class="mobile-slide-card bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
                     <div class="mb-6">
                         <div class="w-20 h-20 rounded-full bg-light-green flex items-center justify-center mb-4 mx-auto">
                             <i class="fa-solid fa-users text-light-green-dark text-2xl" style="font-size: 1.2em;"></i>
@@ -160,7 +160,7 @@
                 </div>
 
                 <!-- Point 2: 定期的なお出かけ会実施 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
+                <div class="mobile-slide-card bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
                     <div class="mb-6">
                         <div class="w-20 h-20 rounded-full bg-light-green flex items-center justify-center mb-4 mx-auto">
                             <i class="fa-solid fa-calendar-check text-light-green-dark text-2xl" style="font-size: 1.2em;"></i>
@@ -174,7 +174,7 @@
                 </div>
 
                 <!-- Point 3: 販売会なし -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
+                <div class="mobile-slide-card bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-light-green/20">
                     <div class="mb-6">
                         <div class="w-20 h-20 rounded-full bg-light-green flex items-center justify-center mb-4 mx-auto">
                             <i class="fa-solid fa-ban text-light-green-dark text-2xl" style="font-size: 1.2em;"></i>
@@ -187,6 +187,7 @@
                     </p>
                 </div>
             </div>
+            <p class="mobile-slide-hint text-center text-sm text-medium-gray mt-4 md:hidden">横にスライドして3つの安心を見られます</p>
         </div>
     </section>
 
@@ -299,36 +300,43 @@
                         <h3 class="text-2xl font-serif font-bold mb-2">明日香</h3>
                         <p class="text-gray-500 mb-6 text-sm">Asuka</p>
 
-                        <div class="space-y-4 text-gray-700 leading-relaxed">
-                            <p>
-                                以前から着物に憧れがあったのですが、始めるきっかけがなく、行動に移せないでいました。
-                                子供が産まれて自分も母親になり、ふと母親も私の入学式などは着物で参加していた事を思い出して、私も娘達の式典には着物で参列したいと思うようになりました。
-                            </p>
-                            <p>
-                                それから教室に通い始め、一人で着物が着られるようになってから、もっと本格的に着付けを学ぼうと思い今に至っています。
-                            </p>
-                            <p>
-                                日本の伝統着である着物の良さ、着る事で自分も違う人になったような楽しさ、それが日常になれるちょっとしたお手伝いができたらと思っています。
-                            </p>
-                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            寺﨑きもの着付け教室のサブ講師として、受講生の皆さんを丁寧にサポートします。
+                        </p>
 
-                        <div class="mt-6 pt-4 border-t border-gray-200 grid md:grid-cols-2 gap-4">
-                            <div>
-                                <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
-                                    <i class="fa-solid fa-certificate text-yellow-500"></i> 保有資格
-                                </h4>
-                                <p class="text-sm text-gray-800">山野流奥伝準師範講師</p>
+                        <details class="sub-teacher-details mt-6">
+                            <summary>明日香先生の詳細を見る</summary>
+                            <div class="mt-5 space-y-4 text-gray-700 leading-relaxed">
+                                <p>
+                                    以前から着物に憧れがあったのですが、始めるきっかけがなく、行動に移せないでいました。
+                                    子供が産まれて自分も母親になり、ふと母親も私の入学式などは着物で参加していた事を思い出して、私も娘達の式典には着物で参列したいと思うようになりました。
+                                </p>
+                                <p>
+                                    それから教室に通い始め、一人で着物が着られるようになってから、もっと本格的に着付けを学ぼうと思い今に至っています。
+                                </p>
+                                <p>
+                                    日本の伝統着である着物の良さ、着る事で自分も違う人になったような楽しさ、それが日常になれるちょっとしたお手伝いができたらと思っています。
+                                </p>
                             </div>
-                            <div>
-                                <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
-                                    <i class="fa-solid fa-trophy text-yellow-500"></i> 受賞歴
-                                </h4>
-                                <ul class="text-sm text-gray-800 space-y-1">
-                                    <li>2022年 全国大会 小紋一重太鼓の部 準優秀賞</li>
-                                    <li>2024年 全国大会 振袖の部 審査員奨励賞</li>
-                                </ul>
+
+                            <div class="mt-6 pt-4 border-t border-gray-200 grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
+                                        <i class="fa-solid fa-certificate text-yellow-500"></i> 保有資格
+                                    </h4>
+                                    <p class="text-sm text-gray-800">山野流奥伝準師範講師</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif font-bold text-sm mb-1 flex items-center gap-2">
+                                        <i class="fa-solid fa-trophy text-yellow-500"></i> 受賞歴
+                                    </h4>
+                                    <ul class="text-sm text-gray-800 space-y-1">
+                                        <li>2022年 全国大会 小紋一重太鼓の部 準優秀賞</li>
+                                        <li>2024年 全国大会 振袖の部 審査員奨励賞</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -346,10 +354,10 @@
             </div>
         </div>
         <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+            <div class="mobile-card-slider story-slider grid md:grid-cols-3 gap-8 items-start max-w-6xl mx-auto" aria-label="着物への想い">
                 
                 <!-- Story 1 -->
-                <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="mobile-slide-card bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
                     <i class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-light-green opacity-50 z-0"></i>
                     <!-- 装飾要素 -->
                     <div class="absolute top-4 right-4 w-12 h-12 decorative-icon decorative-icon-sakura opacity-30 z-0">
@@ -375,7 +383,7 @@
                 </div>
 
                 <!-- Story 2 -->
-                <div class="bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="mobile-slide-card bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
                     <i class="fa-solid fa-graduation-cap absolute top-6 left-6 text-6xl text-light-green opacity-50 z-0"></i>
                     <!-- 装飾要素 -->
                     <div class="relative z-10">
@@ -391,6 +399,16 @@
                             <p class="font-bold text-xl text-center py-4 font-serif text-gray-800">
                                 「着付けできるなんて、かっこいい」と。
                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="mobile-slide-card bg-white p-10 rounded-2xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                    <i class="fa-solid fa-seedling absolute top-6 left-6 text-6xl text-light-green opacity-50 z-0"></i>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif font-bold text-dark-gray mb-6">着物がくれた経験</h3>
+                        <div class="space-y-4 text-gray-700 leading-loose">
                             <p>
                                 私は彼女にあこがれて、すぐに着付け教室の門をたたきました。
                                 それから20年以上、会社員として働きながら着付け教室に通い続けてきました。
@@ -404,6 +422,7 @@
                 </div>
 
             </div>
+            <p class="mobile-slide-hint text-center text-sm text-medium-gray mt-4 md:hidden">横にスライドして次のメッセージを読めます</p>
         </div>
     </section>
 
@@ -795,6 +814,11 @@
             </div>
         </div>
     </footer>
+
+    <a href="#top" class="back-to-top" aria-label="ページの上に戻る">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+        <span>上へ</span>
+    </a>
 
     <!-- FAQ Toggle Script -->
     <script>
