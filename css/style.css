@@ -88,7 +88,6 @@ button:focus-visible {
 .faq-button,
 .achievement-details summary,
 .sub-teacher-details summary,
-.slider-control,
 #mobile-menu-button {
     min-height: 44px;
 }
@@ -328,27 +327,9 @@ footer a {
 }
 
 .mobile-slide-hint {
-    letter-spacing: 0.03em;
-}
-
-.slider-controls {
-    display: none;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
-}
-
-.slider-control {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(91, 116, 95, 0.35);
-    border-radius: 999px;
-    padding: 0.55rem 1.05rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
     color: var(--midori-deep);
-    background: #fff;
-    font-weight: 700;
-    box-shadow: 0 8px 20px rgba(32, 36, 31, 0.06);
 }
 
 section {
@@ -521,10 +502,6 @@ img {
 }
 
 @media (max-width: 767px) {
-    .slider-controls {
-        display: flex;
-    }
-
     .mobile-card-slider {
         display: flex !important;
         align-items: flex-start !important;
