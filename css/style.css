@@ -178,6 +178,26 @@ button:focus-visible {
     box-shadow: none !important;
 }
 
+.voice-card {
+    overflow: hidden;
+}
+
+.voice-silhouette {
+    display: grid;
+    place-items: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 999px;
+    color: var(--midori-deep);
+    background:
+        radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 38%),
+        var(--wakaba);
+    border: 1px solid rgba(91, 116, 95, 0.18);
+    box-shadow: 0 12px 28px rgba(32, 36, 31, 0.06);
+    font-size: 1.75rem;
+    opacity: 0.92;
+}
+
 .message-copy,
 .message-copy p {
     text-align: left !important;
