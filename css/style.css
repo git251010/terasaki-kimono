@@ -114,15 +114,6 @@ button:focus-visible {
     box-shadow: 0 10px 30px rgba(32, 36, 31, 0.06);
 }
 
-.line-link.is-pending {
-    filter: grayscale(0.25);
-    opacity: 0.88;
-}
-
-.line-link.is-pending:hover {
-    transform: none !important;
-}
-
 .contact-line-block {
     row-gap: 1rem !important;
 }
