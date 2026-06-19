@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- カスタムCSS -->
-    <link rel="stylesheet" href="css/style.css?v=260619i">
+    <link rel="stylesheet" href="css/style.css?v=260619j">
 
     <!-- Tailwind設定 -->
     <script>
@@ -187,6 +187,10 @@
                     </p>
                 </div>
             </div>
+            <div class="slider-controls md:hidden" aria-label="3つの安心のスライド操作">
+                <button type="button" class="slider-control" data-slider=".point-slider" data-direction="-1">前へ</button>
+                <button type="button" class="slider-control" data-slider=".point-slider" data-direction="1">次へ</button>
+            </div>
             <p class="mobile-slide-hint text-center text-sm text-medium-gray mt-4 md:hidden">横にスライドして3つの安心を見られます</p>
         </div>
     </section>
@@ -290,15 +294,15 @@
                     <!-- Photo Column -->
                     <div class="md:w-4/12 relative h-80 md:h-auto">
                         <img src="images/teacher-asuka.jpg?v=260619photo"
-                             alt="明日香先生"
+                             alt="小池明日香先生"
                              class="absolute inset-0 w-full h-full object-cover object-top">
                     </div>
 
                     <!-- Content Column -->
                     <div class="md:w-8/12 p-8 md:p-10 flex flex-col justify-center">
                         <span class="inline-block py-1 px-3 rounded bg-light-green text-dark-gray text-sm font-bold mb-4 w-fit">講師紹介</span>
-                        <h3 class="text-2xl font-serif font-bold mb-2">明日香</h3>
-                        <p class="text-gray-500 mb-6 text-sm">Asuka</p>
+                        <h3 class="text-2xl font-serif font-bold mb-2">小池 明日香</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Koike Asuka</p>
 
                         <p class="text-gray-700 leading-relaxed">
                             寺﨑きもの着付け教室のサブ講師として、受講生の皆さんを丁寧にサポートします。
@@ -422,6 +426,10 @@
                 </div>
 
             </div>
+            <div class="slider-controls md:hidden" aria-label="着物への想いのスライド操作">
+                <button type="button" class="slider-control" data-slider=".story-slider" data-direction="-1">前へ</button>
+                <button type="button" class="slider-control" data-slider=".story-slider" data-direction="1">次へ</button>
+            </div>
             <p class="mobile-slide-hint text-center text-sm text-medium-gray mt-4 md:hidden">横にスライドして次のメッセージを読めます</p>
         </div>
     </section>
@@ -456,6 +464,7 @@
                     <div class="voice-silhouette relative z-10 mx-auto mb-6" aria-hidden="true">
                         <i class="fa-solid fa-user"></i>
                     </div>
+                    <h3 class="relative z-10 text-xl md:text-2xl font-serif font-bold text-dark-gray mb-5 text-left">自分を磨く時間に</h3>
                     <div class="relative z-10 space-y-4 text-dark-gray leading-loose">
                         <p>
                             寺﨑先生は知識が豊富で、どんな質問にも丁寧に答えてくださる熱意のある先生です。
@@ -646,35 +655,35 @@
                         <path d="M10 3 Q11 5 12 4 Q13 3 12 5 Q14 6 13 7 Q14 8 12 8 Q11 10 10 9 Q9 10 8 8 Q6 8 7 7 Q6 6 8 5 Q7 3 8 4 Q9 5 10 3 Z" fill="currentColor"/>
                     </svg>
                 </div>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="text-dark-gray hover:text-light-green-dark transition-colors inline-flex items-center gap-2 font-bold">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="instagram-profile-link text-dark-gray hover:text-light-green-dark transition-colors inline-flex items-center gap-2 font-bold">
                     <i class="fa-brands fa-instagram text-xl"></i>
                     <span class="font-serif">@kyoko_kimono_time</span>
                 </a>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto">
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 1を開く">
                     <img src="images/insta-1.jpg?v=260619photo" alt="Instagram投稿写真 1" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 2を開く">
                     <img src="images/insta-2.jpg?v=260619photo" alt="Instagram投稿写真 2" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 3を開く">
                     <img src="images/insta-3.jpg?v=260619photo" alt="Instagram投稿写真 3" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 4を開く">
                     <img src="images/insta-4.jpg?v=260619photo" alt="Instagram投稿写真 4" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 5を開く">
                     <img src="images/insta-5.jpg?v=260619photo" alt="Instagram投稿写真 5" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 6を開く">
                     <img src="images/insta-6.jpg?v=260619photo" alt="Instagram投稿写真 6" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 7を開く">
                     <img src="images/insta-7.jpg?v=260619photo" alt="Instagram投稿写真 7" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
-                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer">
+                <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 8を開く">
                     <img src="images/insta-8.jpg?v=260619photo" alt="Instagram投稿写真 8" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
@@ -776,7 +785,7 @@
         </div>
         <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl font-serif font-bold mb-6">体験レッスン受付中</h2>
-            <p class="mb-6 text-white/90">
+            <p class="cta-intro mb-6 text-white/90">
                 まずは手ぶらで体験から。お気軽にお問い合わせください。
             </p>
             <div class="text-center mb-4">
@@ -815,9 +824,9 @@
         </div>
     </footer>
 
-    <a href="#top" class="back-to-top" aria-label="ページの上に戻る">
+    <a href="#top" class="back-to-top" aria-label="ページトップへ戻る">
         <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-        <span>上へ</span>
+        <span>ページトップへ</span>
     </a>
 
     <!-- FAQ Toggle Script -->
@@ -852,6 +861,24 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 menuButton?.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.querySelectorAll('[data-slider]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const slider = document.querySelector(button.dataset.slider);
+                const card = slider?.querySelector('.mobile-slide-card');
+                if (!slider || !card) return;
+
+                const gap = parseFloat(window.getComputedStyle(slider).columnGap || '0');
+                const distance = card.getBoundingClientRect().width + gap;
+                const direction = Number(button.dataset.direction || 1);
+                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                slider.scrollBy({
+                    left: direction * distance,
+                    behavior: reduceMotion ? 'auto' : 'smooth',
+                });
             });
         });
     </script>
