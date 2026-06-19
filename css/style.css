@@ -162,6 +162,15 @@ button:focus-visible {
     background: var(--wakaba) !important;
 }
 
+.faq-button:focus-visible {
+    outline: none !important;
+    box-shadow: inset 0 0 0 3px rgba(91, 116, 95, 0.32) !important;
+}
+
+.faq-button[aria-expanded="true"] {
+    background: var(--wakaba) !important;
+}
+
 .faq-answer {
     border-top: 0 !important;
     margin-top: 0 !important;
