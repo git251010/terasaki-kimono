@@ -290,6 +290,10 @@ footer a {
     max-width: 100%;
 }
 
+.message-copy .message-signature {
+    text-align: right !important;
+}
+
 .achievement-list span {
     display: inline-block;
     min-width: 4.5em;
@@ -600,6 +604,12 @@ img {
         padding-bottom: 0.75rem;
     }
 
+    main > section:not(.hero-section) > .container,
+    footer .container {
+        padding-left: 1.35rem !important;
+        padding-right: 1.35rem !important;
+    }
+
     .site-logo__mark {
         width: 36px;
         height: 36px;
@@ -674,6 +684,16 @@ img {
     .hero-copy .max-w-md {
         justify-content: flex-start;
         margin-bottom: 0 !important;
+    }
+
+    .hero-copy .hero-free {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-copy .hero-cta {
+        justify-content: center;
+        width: 100%;
     }
 
     .hero-copy .max-w-md .line-link {
