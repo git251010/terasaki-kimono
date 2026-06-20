@@ -89,6 +89,7 @@ button:focus-visible {
 
 .line-link,
 .faq-button,
+.teacher-credentials-details summary,
 .achievement-details summary,
 .sub-teacher-details summary,
 #mobile-menu-button {
@@ -296,6 +297,7 @@ footer a {
     font-weight: 700;
 }
 
+.teacher-credentials-details summary,
 .achievement-details summary,
 .sub-teacher-details summary {
     display: inline-flex;
@@ -314,23 +316,27 @@ footer a {
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+.teacher-credentials-details summary::-webkit-details-marker,
 .achievement-details summary::-webkit-details-marker,
 .sub-teacher-details summary::-webkit-details-marker {
     display: none;
 }
 
+.teacher-credentials-details summary::after,
 .achievement-details summary::after,
 .sub-teacher-details summary::after {
     content: "＋";
     font-weight: 700;
 }
 
+.teacher-credentials-details[open] > summary,
 .achievement-details[open] summary,
 .sub-teacher-details[open] summary {
     background: var(--wakaba);
     border-color: rgba(91, 116, 95, 0.55);
 }
 
+.teacher-credentials-details[open] > summary::after,
 .achievement-details[open] summary::after,
 .sub-teacher-details[open] summary::after {
     content: "−";
