@@ -552,7 +552,13 @@ img {
     }
 
     .point-slider .mobile-slide-card {
+        display: flex;
+        flex-direction: column;
         padding: 1.7rem 1.45rem !important;
+    }
+
+    .point-slider.mobile-card-slider {
+        align-items: stretch !important;
     }
 
     .point-slider .mobile-slide-card .w-20 {
