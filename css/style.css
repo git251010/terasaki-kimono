@@ -206,6 +206,23 @@ footer a {
     box-shadow: 0 10px 30px rgba(32, 36, 31, 0.06);
 }
 
+@media (min-width: 1024px) {
+    .hero-copy {
+        width: min(58%, 48rem) !important;
+    }
+
+    .hero-lead {
+        max-width: min(100%, 42rem) !important;
+        width: fit-content;
+        white-space: nowrap;
+    }
+
+    .hero-copy .hero-free,
+    .hero-copy .hero-cta {
+        max-width: min(100%, 42rem) !important;
+    }
+}
+
 .contact-line-block {
     row-gap: 1rem !important;
 }
