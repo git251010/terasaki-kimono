@@ -91,20 +91,20 @@ button:focus-visible {
 .faq-button,
 .teacher-credentials-details summary,
 .achievement-details summary,
-.sub-teacher-details summary,
-#mobile-menu-button {
+.sub-teacher-details summary {
     min-height: 44px;
 }
 
-#mobile-menu-button {
+.header-line-link {
+    padding: 0.55rem 0.95rem;
     min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 44px;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 700;
 }
 
 nav a,
-#mobile-menu a,
 footer a {
     min-height: 44px;
     min-width: 44px;
