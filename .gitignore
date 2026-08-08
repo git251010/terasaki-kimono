@@ -4,5 +4,12 @@ private/企画書.md
 private/
 backups/
 
+# メインビジュアルの不採用案と確認用ページ（手元だけに残す）
+hero-test.html
+images/hero-c.jpg
+images/hero-c-light.jpg
+images/hero-d-park.jpg
+images/hero-e-town.jpg
+
 # macOS
 .DS_Store

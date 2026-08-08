@@ -83,8 +83,12 @@
     <section id="top" class="hero-section relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="images/hero.jpg?v=260619photo"
-                 alt="着物姿で楽しむ寺﨑きもの着付け教室の生徒たち" class="w-full h-full object-cover opacity-80">
+            <picture>
+                <!-- スマホは縦長画面。横長のまま敷くと寄りすぎるので縦位置カットに差し替える -->
+                <source media="(max-width: 767px)" srcset="images/hero-f-stone-sp.jpg?v=260808b">
+                <img src="images/hero-f-stone.jpg?v=260808"
+                     alt="石畳の道を着物姿で歩くお二人" class="w-full h-full object-cover opacity-80">
+            </picture>
             <div class="absolute inset-0 hero-gradient"></div>
             <!-- 和風装飾 -->
             <div class="absolute top-10 right-10 w-32 h-32 decorative-icon decorative-icon-sakura hidden md:block">
@@ -555,28 +559,28 @@
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto">
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 1を開く">
-                    <img src="images/insta-1.jpg?v=260619photo" alt="Instagram投稿写真 1" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-1.jpg?v=260808photo" alt="振袖姿で並ぶ受講生のみなさん" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 2を開く">
-                    <img src="images/insta-2.jpg?v=260619photo" alt="Instagram投稿写真 2" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-2.jpg?v=260808photo" alt="帯を結ぶ手元の練習" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 3を開く">
-                    <img src="images/insta-3.jpg?v=260619photo" alt="Instagram投稿写真 3" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-3.jpg?v=260808photo" alt="姫路城を背にした着物姿でのお出かけ" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 4を開く">
-                    <img src="images/insta-4.jpg?v=260619photo" alt="Instagram投稿写真 4" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-4.jpg?v=260808photo" alt="浴衣・着物姿での集合写真" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 5を開く">
-                    <img src="images/insta-5.jpg?v=260619photo" alt="Instagram投稿写真 5" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-5.jpg?v=260808photo" alt="お出かけ会でお店の前に並ぶみなさん" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 6を開く">
-                    <img src="images/insta-6.jpg?v=260619photo" alt="Instagram投稿写真 6" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-6.jpg?v=260808photo" alt="お出かけ会での会食の様子" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 7を開く">
-                    <img src="images/insta-7.jpg?v=260619photo" alt="Instagram投稿写真 7" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-7.jpg?v=260808photo" alt="桜に手をのばす着物姿" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 <a href="https://www.instagram.com/kyoko_kimono_time/" target="_blank" rel="noopener noreferrer" class="aspect-square relative overflow-hidden group cursor-pointer" aria-label="Instagram投稿写真 8を開く">
-                    <img src="images/insta-8.jpg?v=260619photo" alt="Instagram投稿写真 8" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="images/insta-8.jpg?v=260808photo" alt="桜の下でのお花見のお出かけ" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
         </div>
