@@ -662,8 +662,9 @@ img {
         align-items: flex-end;
     }
 
+    /* スマホ用は人物を1.5倍に寄せた縦カット。人物が中央にいるので中央合わせ */
     .hero-section img {
-        object-position: 79% center;
+        object-position: 50% center;
         opacity: 0.98;
     }
 
